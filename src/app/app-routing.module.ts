@@ -9,6 +9,10 @@ const routes: Routes = [
   {
     path: 'insert-data',
     loadChildren: () => import('./pages/insert-data/insert-data.module').then( m => m.InsertDataPageModule)
+  },
+  {
+    path: 'author',
+    loadChildren: () => import('./pages/author/author.module').then( m => m.AuthorPageModule)
   }
 ];
 @NgModule({

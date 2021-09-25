@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';  
-import { AuthorService, SearchType } from './../services/api-call-service.service';  
+import { AuthorService, SearchType } from './../../services/api-call-service.service';  
 import { Observable } from 'rxjs';  
   
 @Component({  
-  selector: 'app-tab1',  
-  templateUrl: './tab1.page.html',  
-  styleUrls: ['./tab1.page.scss'],  
+  selector: 'app-author',  
+  templateUrl: './author.page.html',  
+  styleUrls: ['./author.page.scss'],  
 })  
-export class Tab1Page implements OnInit {  
+export class AuthorPage implements OnInit {  
   
   results: Observable<any>;  
   searchTerm: string = '';  
@@ -15,9 +15,7 @@ export class Tab1Page implements OnInit {
    
   constructor(private authorservice: AuthorService) { }  
    
-  ngOnInit() {
-    // this.results = this.authorservice.searchauthor(this.searchTerm, this.type);  
-   }  
+  ngOnInit() { }  
   
   livesearch() {    
     this.results = this.authorservice.searchauthor(this.searchTerm, this.type);  

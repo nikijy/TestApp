@@ -1,6 +1,7 @@
 <ion-header>  
-  <ion-toolbar color="primary">      
-    <ion-title style="margin-left: 142px;margin-top: -34px;">کتاب ها</ion-title>  
+  <ion-toolbar color="primary">  
+    <img src="https://csharpcorner-mindcrackerinc.netdna-ssl.com/App_Themes/CSharp/Images/SiteLogo.png">  
+    <ion-title style="margin-left: 142px;margin-top: -34px;">MEMBER BOOK</ion-title>  
   </ion-toolbar>  
 </ion-header>  
    
@@ -11,10 +12,11 @@
   <ion-item>  
     <ion-label>Select Searchtype</ion-label>  
     <ion-select [(ngModel)]="type" (ionChange)="livesearch($event)">  
-      <ion-select-option value="">همه</ion-select-option>  
-      <ion-select-option value="Admin">ادمین</ion-select-option>  
-      <ion-select-option value="Editor">ویراستار</ion-select-option>       
-      <ion-select-option value="Author">نویسنده</ion-select-option>  
+      <ion-select-option value="">All</ion-select-option>  
+      <ion-select-option value="Admin">Admin</ion-select-option>  
+      <ion-select-option value="Editor">Editor</ion-select-option>  
+      <ion-select-option value="MVP">MVPs</ion-select-option>  
+      <ion-select-option value="Author">Author</ion-select-option>  
     </ion-select>  
   </ion-item>  
    
