@@ -14,4 +14,9 @@
   </ion-header>
 
   <app-explore-container name="Tab 2 page"></app-explore-container>
+
+<ion-input type="text" placeholder="متن را وارد کنید" [(ngModel)]="name" text-right id="input" ></ion-input>
+
+<ion-button color="primary" (click)="insert()" [(ngModel)]="myButton">ثبت</ion-button>
+
 </ion-content>

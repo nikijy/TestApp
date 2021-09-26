@@ -1,35 +1,35 @@
-<ion-header>  
-  <ion-toolbar color="primary">      
-    <ion-title style="margin-left: 142px;margin-top: -34px;">کتاب ها</ion-title>  
-  </ion-toolbar>  
-</ion-header>  
-   
-<ion-content>  
-   
-  <ion-searchbar [(ngModel)]="searchTerm" (ionChange)="livesearch($event)"></ion-searchbar>  
-   
-  <ion-item>  
-    <ion-label>Select Searchtype</ion-label>  
-    <ion-select [(ngModel)]="type" (ionChange)="livesearch($event)">  
-      <ion-select-option value="">همه</ion-select-option>  
-      <ion-select-option value="Admin">ادمین</ion-select-option>  
-      <ion-select-option value="Editor">ویراستار</ion-select-option>       
-      <ion-select-option value="Author">نویسنده</ion-select-option>  
-    </ion-select>  
-  </ion-item>  
-   
-  <ion-list>  
-    <ion-item button *ngFor="let item of (results | async)" [routerLink]="['/', 'authors', item.id]">  
-      <ion-avatar slot="start">  
-        <img [src]="item.profilepicture">  
-      </ion-avatar>  
-      <ion-label text-wrap>  
-        <h3>{{ item.name }}</h3>  
-        <ion-icon name="locate"></ion-icon>  {{ item.location }}  
-      </ion-label>  
-       <ion-icon slot="end"  name="man"></ion-icon>{{item.role}}     
-    </ion-item>  
-   
-  </ion-list>  
-   
-</ion-content>  
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title style="margin-left: 142px;margin-top: -34px;">لیست نویسندگان</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-searchbar [(ngModel)]="searchTerm" (ionChange)="livesearch()"></ion-searchbar>
+
+  <ion-item>
+    <ion-label>Select Searchtype</ion-label>
+    <ion-select [(ngModel)]="type" (ionChange)="livesearch()">
+      <ion-select-option value="">همه</ion-select-option>
+      <ion-select-option value="Admin">ادمین</ion-select-option>
+      <ion-select-option value="Editor">ویراستار</ion-select-option>
+      <ion-select-option value="Author">نویسنده</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-list>
+    <ion-item button *ngFor="let item of (results | async)" [routerLink]="['/', 'authors', item.id]">
+      <ion-avatar slot="start">
+        <img [src]="item.profilepicture">
+      </ion-avatar>
+      <ion-label text-wrap>
+        <h3>{{ item.name }}</h3>
+        <ion-icon name="locate"></ion-icon>  {{ item.location }}
+      </ion-label>
+       <ion-icon slot="end"  name="man"></ion-icon>{{item.role}}
+    </ion-item>
+
+  </ion-list>
+
+</ion-content>
