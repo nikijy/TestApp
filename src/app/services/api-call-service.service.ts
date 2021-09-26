@@ -23,4 +23,7 @@ export class AuthorService {
       map(results => results)
     );
   }
+  getauthorProfile(id) {
+    return this.http.get(`${this.url}?id=${id}`);
+  }
 }
